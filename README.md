@@ -19,7 +19,7 @@ Welcome to the Fancy FAQ Accordion project! 🎉 This is a sleek and stylish FAQ
 
 ```bash
 git clone https://github.com/yourusername/fancy-faq-accordion.git
-cd fancy-faq-accordion
+cd path of Folder
 ```
 
 ### 2. Install Dependencies
