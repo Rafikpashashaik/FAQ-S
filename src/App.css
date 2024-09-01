@@ -1,0 +1,211 @@
+/* General styles */
+#FAQ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.accordian {
+  width: 100%;
+  max-width: 950px;
+  /* Increased max width for better readability */
+  margin: 0 auto;
+  /* Centering the accordion */
+  padding: 15px 20px;
+  /* Slightly increased padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Box shadow for visual depth */
+  border-radius: 8px;
+  /* Rounded corners for better aesthetics */
+}
+
+.item {
+  background-color: #E7ECF5;
+  margin-bottom: 10px;
+  /* Increased margin for spacing between items */
+  padding: 15px 20px;
+  /* Increased padding for better touch targets */
+  border-radius: 8px;
+  /* Consistent border radius */
+  position: relative;
+  /* Position relative for pseudo-elements */
+  transition: background-color 0.3s ease;
+  /* Smooth background color transition */
+}
+
+.item.selected {
+  background-color: #ffffff;
+  /* Changed selected background color */
+}
+
+.item::after {
+  content: '';
+  /* Add content for pseudo-element */
+  position: absolute;
+  right: 10px;
+  /* Adjust positioning */
+  top: 50%;
+  transform: translateY(-50%);
+  /* Center vertically */
+  width: 8px;
+  /* Indicator width */
+  height: 8px;
+  /* Indicator height */
+  border-radius: 50%;
+  /* Round indicator */
+  background-color: #06965C;
+  /* Indicator color */
+}
+
+.FAQ-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  /* Increased font weight for titles */
+  font-size: 18px;
+  /* Increased font size for better readability */
+  color: #131414;
+  /* Consistent text color */
+}
+
+.faqQuestion {
+  font-size: 15px;
+  /* Default font size */
+  color: #131414;
+  /* Text color */
+  text-align: start;
+}
+
+.FAQ-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0, 1, 0, 1);
+  /* Smooth height transition */
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #131414;
+}
+
+.FAQ-content.show {
+  max-height: 9999px;
+  /* Expanding height for visibility */
+  transition: max-height 0.8s cubic-bezier(1, 0, 1, 0);
+  /* Smooth height transition */
+}
+
+#expandToggleOne {
+  background: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  top: 0;
+  /* Ensure proper alignment */
+  transition: font-size 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .accordian {
+      max-width: 90%;
+      /* Adjust max width for medium screens */
+  }
+
+  .item {
+      padding: 12px 16px;
+      /* Adjust padding for medium screens */
+  }
+
+  .FAQ-title {
+      font-size: 16px;
+      /* Adjust font size for medium screens */
+  }
+
+  #expandToggleOne {
+      width: 28px;
+      /* Adjusted size for medium screens */
+      height: 28px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordian {
+      padding: 10px;
+      /* Reduced padding for smaller screens */
+  }
+
+  .item {
+      padding: 10px 14px;
+      /* Adjusted padding for smaller screens */
+  }
+
+  .FAQ-title {
+      font-size: 14px;
+      /* Reduced font size */
+  }
+
+  #expandToggleOne {
+      width: 24px;
+      /* Further adjusted size */
+      height: 24px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordian {
+      padding: 5px;
+      /* Further reduced padding for very small screens */
+  }
+
+  .item {
+      padding: 8px 12px;
+      /* Further reduced padding */
+  }
+
+  .FAQ-title {
+      font-size: 12px;
+      /* Further reduced font size */
+  }
+
+  #expandToggleOne {
+      width: 20px;
+      /* Further adjusted size */
+      height: 20px;
+      font-size: 12px;
+  }
+}
+
+.FAQ-ShowMore {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.FAQ-ShowMore button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #06965C;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.FAQ-ShowMore button:hover {
+  background-color: #8EE0C4;
+  color: black;
+  font-weight: 700;
+}
