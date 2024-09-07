@@ -66,6 +66,6 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 For any questions or feedback, feel free to contact me:
 
 Email: shaikrafikpasha786@gmail.com
-GitHub: Rafikpashashaik
-Codepen: Rafi@dev
+GitHub: [Rafikpashashaik](https://github.com/Rafikpashashaik)
+Codepen: [Rafi@dev](https://codepen.io/Rafael-007)
 Feel free to add any additional information or sections that you think might be relevant. Happy coding! 🎨
